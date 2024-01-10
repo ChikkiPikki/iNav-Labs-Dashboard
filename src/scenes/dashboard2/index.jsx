@@ -1,10 +1,6 @@
-import { Box, Button, Typography, useTheme, IconButton } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 import BatteryFullIcon from "@mui/icons-material/BatteryFull";
 import BatteryCharging50Icon from "@mui/icons-material/BatteryCharging50";
@@ -23,49 +19,6 @@ const Dashboard = () => {
 
   return (
     <Box m="20px">
-      <Box display="flex" flexDirection="column" alignItems="center" mt={2}>
-        <Button
-          variant="contained"
-          color="primary"
-          startIcon={<ArrowUpwardIcon />}
-          sx={{ marginBottom: 1 }}
-        >
-          Up
-        </Button>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%", // Take full width
-            marginBottom: 1,
-          }}
-        >
-          <Button
-            variant="contained"
-            color="primary"
-            startIcon={<ArrowLeftIcon />}
-            sx={{ flex: "0.5", marginRight: 1 }} // Reduced width
-          >
-            Left
-          </Button>
-          <Button
-            variant="contained"
-            color="primary"
-            startIcon={<ArrowRightIcon />}
-            sx={{ flex: "0.5", marginLeft: 1 }} // Reduced width
-          >
-            Right
-          </Button>
-        </Box>
-        <Button
-          variant="contained"
-          color="primary"
-          startIcon={<ArrowDownwardIcon />}
-          sx={{ marginTop: 1 }} // Add margin to the top
-        >
-          Down
-        </Button>
-      </Box>
       {/* GRID & CHARTS */}
       <Box
         display="grid"
